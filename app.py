@@ -4,7 +4,7 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from os import path
 if path.exists("env.py"):
-    import env 
+    import env
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'recipe_db'
@@ -14,10 +14,10 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
-def hello():
-    return 'HelloWorld'
+def index():
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
-    port=int(os.environ.get('PORT')),
-    debug=True)
+            port=int(os.environ.get('PORT')),
+            debug=True)
