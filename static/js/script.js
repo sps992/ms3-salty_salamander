@@ -1,10 +1,11 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
-  });
+ // jQuery
 
-  // Or with jQuery
-
-  $(document).ready(function(){
+$(document).ready(function(){
     $('.sidenav').sidenav();
-  });
+
+    $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+    });
+
+});
