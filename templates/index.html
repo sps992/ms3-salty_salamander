@@ -1,8 +1,4 @@
-{% extends "base.html" %}{% block title %}Home{% endblock %}
-
-
-
-   
+{% extends "base.html" %}
 
     {% block content %} 
     <nav>
@@ -13,24 +9,48 @@
             <ul id="nav-mobile" class="hide-on-med-and-down">
                 <li class="active" ><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li style="float:right;"><a class="waves-effect waves-light btn" href="#">Login</a></li>
-                <li style="float:right;"><a href="#">Recipes</a></li>
+                <li><a class="waves-effect waves-light btn" href="#">Login</a></li>
+                <li><a href="#">Recipes</a></li>
             </ul>
         </div>
     </nav>   
     <ul class="sidenav" id="mobile-demo">
         <li class="active" ><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Recipes</a></li>
-        <li><a class="waves-effect waves-light btn" href="#">Login</a></li>
+        <li class="nav-bar_right"><a href="#">Add a Recipe</a></li>
+        <li class="nav-bar_right"><a class="waves-effect waves-light btn" href="#">Login</a></li>
     </ul>
     
   <div class="carousel carousel-slider">
     <a class="carousel-item" href="#one!"><img src="../static/images/slide1-home.jpg"></a>
-    <a class="carousel-item" href="#two!"><img src="../static/images/slide1-home.jpg"></a>
-    <a class="carousel-item" href="#three!"><img src="../static/images/slide1-home.jpg"></a>
-    <a class="carousel-item" href="#four!"><img src="../static/images/slide1-home.jpg"></a>
+    <a class="carousel-item" href="#two!"><img src="../static/images/slide2-home.jpg"></a>
+    <a class="carousel-item" href="#three!"><img src="../static/images/slide3-home.jpg"></a>
   </div>
+          
+      
+            
+
+  <div class="row">
+  <!-- First Item -->
+  {% for recipe in recipes %}
+    <div class="col s12 m6 l4">
+      <div class="card">
+        <div class="card-image">
+          <img src="../static/images/chicken-jambalaya.jpg">
+          <span class="card-title"> {{recipe.recipe_name}} - {{recipe.category_name}}</span>
+        </div>
+        <div class="card-content">
+          <p><i class="medium material-icons">alarm</i> Prep time: {{recipe.prep_time_mins}}</p>
+           <p><i class="large material-icons">alarm</i>Cook time: {{recipe.cook_time_mins}}</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
         {% endblock %}
         
    
