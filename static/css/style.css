@@ -1,2 +1,15 @@
 .material-icons{vertical-align: middle;}
 .nav-bar_right{float:right;}
+.card .card-image{text-align: center;}
+i.large{font-size: 20rem;}
+
+/* Sticky Footer */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }

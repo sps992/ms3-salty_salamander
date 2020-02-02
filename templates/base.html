@@ -6,6 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Welcome to The Salty Salamander, get your fill of our tasty treats or share your own for others to drool over!" />
         <meta name="author" content="Captain Salamander" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../static/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../static/images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../static/images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="../static/images/favicon/site.webmanifest">
         <title>The Salty Salamander</title>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -16,7 +20,27 @@
         
         {% block content %} {% endblock %}
         
-   
+        <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Site Map</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Register</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Login</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Copyrights</a></li>
+                </ul>
+              </div>
+            </div> 
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2019 Sam Sedgeman
+            <a class="grey-text text-lighten-4 right" href="#!">Github</a>
+            </div>
+          </div>
+        </footer>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
          <script src="../static/js/script.js"></script>
