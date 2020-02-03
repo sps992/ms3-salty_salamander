@@ -1,8 +1,29 @@
-.material-icons{vertical-align: middle;}
-.nav-bar_right{float:right;}
-.card .card-image{text-align: center;}
-i.large{font-size: 20rem;}
+/* Typography */
+@import url('https://fonts.googleapis.com/css?family=Oswald|Sigmar+One&display=swap');
 
+h1,h2,h3,h4,h5,h6{ font-family: 'Sigmar One', cursive;}
+p, html{ font-family: 'Oswald', sans-serif;}
+.card .card-image{text-align: center;}
+.recipe-icon{width:100%;}
+
+/* Generic styles */
+.align-right{float:right;}
+
+/* Nav Bar */
+
+nav{background-color:#2d1d00;}
+
+nav ul a:hover{background-color:#000000}
+nav ul li.active{background-color:#000000}
+
+.btn, .btn-large, .btn-small{background-color:#ff4e00;}
+.btn, .btn-large, .btn-small:hover{background-color:#7b0d1e;}
+.card{margin:3rem 3rem 0 3rem;}
+.material-icons{vertical-align: middle; color: #c61700; font-size:14rem;}
+
+/* Nav Bar */
+.carousel.carousel-slider{max-height:900px!important;}
+a.carousel-item{cursor: grab;}
 /* Sticky Footer */
 body {
     display: flex;
@@ -13,3 +34,31 @@ body {
   main {
     flex: 1 0 auto;
   }
+
+/* Footer */
+.page-footer{background-color: #2d1d00; margin-top:2rem;}
+.page-footer .footer-copyright{background-color:#000000;}
+
+
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 992px)
+ { 
+    nav .nav-wrapper{padding: 1.7rem 1rem 1rem 1rem;}
+    nav {height:110px; }
+    nav .brand-logo{height:70px; }
+}
+
+@media only screen and (min-width: 993px){
+     nav .nav-wrapper{padding: 4.5rem;}
+    nav {height:150px;}
+    nav .brand-logo{
+        height: 198px;
+        z-index: 1;
+        position: absolute;
+        top: -1px; }
+
+}

@@ -3,22 +3,22 @@
     {% block content %} 
     <nav>
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo center">The Salty Salamander</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <img class="brand-logo center" src="../static/images/logo.png" width="auto" height="200px" alt="The Salty Salamander">
+            <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <div>
             <ul id="nav-mobile" class="hide-on-med-and-down">
                 <li class="active" ><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a class="waves-effect waves-light btn" href="#">Login</a></li>
-                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Add a Recipe</a></li>
+                <li class="align-right"><a class="waves-effect waves-red waves-ripple btn" href="#">Login</a></li>
             </ul>
         </div>
     </nav>   
-    <ul class="sidenav" id="mobile-demo">
+    <ul class="sidenav" id="mobile-menu">
         <li class="active" ><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
-        <li class="nav-bar_right"><a href="#">Add a Recipe</a></li>
-        <li class="nav-bar_right"><a class="waves-effect waves-light btn" href="#">Login</a></li>
+        <li><a href="#">Add a Recipe</a></li>
+        <li><a class="waves-effect waves-red waves-ripple btn" href="#">Login</a></li>
     </ul>
     
   <div class="carousel carousel-slider">
@@ -36,7 +36,7 @@
     <div class="col s12 m6 l4">
       <div class="card">
         <div class="card-image">
-          <i class="large material-icons">local_dining</i>
+          <i class="recipe-icon material-icons">local_dining</i>
         </div>
         <div class="card-content">
             <span class="card-title"> {{recipe.recipe_name}} - {{recipe.category_name}}</span>
@@ -51,10 +51,5 @@
     {% endfor %}
   </div>
   
+  
         {% endblock %}
-        
-   
-       
-    </body>
-
-</html>
