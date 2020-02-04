@@ -13,9 +13,34 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 mongo = PyMongo(app)
 
 
+
 @app.route('/')
 def index():
     return render_template("index.html", recipes=mongo.db.recipes.find())
+
+
+@app.route('/about')
+def about():
+    return render_template("about.html")
+
+
+@app.route('/add_recipe')
+def add_recipe():
+    return render_template("addrecipe.html")
+
+
+@app.route('/register')
+def register():
+    return render_template("register.html")
+
+
+@app.route('/login')
+def login():
+    return render_template("login.html")
+
+@app.route('/copyrights')
+def copyrights():
+    return render_template("copyrights.html")
 
 
 if __name__ == '__main__':

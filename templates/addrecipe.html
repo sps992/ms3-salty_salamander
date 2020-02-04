@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% block content %}
+<nav>
+        <div class="nav-wrapper">
+            <img class="brand-logo center" src="../static/images/logo.png" width="auto" height="200px" alt="The Salty Salamander">
+            <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <div>
+            <ul id="nav-mobile" class="hide-on-med-and-down">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li class="active"><a href="#">Add a Recipe</a></li>
+                <li class="align-right"><a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('register') }}">Register</a></li>
+                <li class="align-right"><a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('login') }}">Login</a></li>
+            </ul>
+        </div>
+    </nav>   
+    <ul class="sidenav" id="mobile-menu">
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li class="active"><a href="#">Add a Recipe</a></li>
+        <li><a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('register') }}">Register</a></li>
+        <li><a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('about') }}">Login</a></li>
+    </ul>
+    <h3>Add Task</h3>
+     <div class="row">
+    <form  action="" method="POST" class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" class="validate">
+          <label for="icon_prefix">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">phone</i>
+          <input id="icon_telephone" type="tel" class="validate">
+          <label for="icon_telephone">Telephone</label>
+        </div>
+      </div>
+    </form>
+  </div>
+
+{% endblock %}

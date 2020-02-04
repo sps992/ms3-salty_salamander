@@ -1,16 +1,25 @@
 {% extends "base.html" %}
- <nav>
+    {% block content %} 
+    <nav>
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo center">The Salty Salamander</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <img class="brand-logo center" src="../static/images/logo.png" width="auto" height="200px" alt="The Salty Salamander">
+            <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <div>
             <ul id="nav-mobile" class="hide-on-med-and-down">
-                <li class="active" ><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a class="waves-effect waves-light btn" href="#">Login</a></li>
-                <li><a href="#">Recipes</a></li>
+                <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('add_recipe') }}">Add a Recipe</a></li>
+                <li class="align-right"><a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('register') }}">Register</a></li>
+                <li class="align-right"><a class="waves-effect waves-red waves-ripple btn" href="#">Login</a></li>
             </ul>
         </div>
-    </nav>  
-    {% block content %} 
+    </nav>   
+    <ul class="sidenav" id="mobile-menu">
+        <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('add_recipe') }}">Add a Recipe</a></li>
+        <li><a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('register') }}">Register</a></li>
+        <li><a class="waves-effect waves-red waves-ripple btn" href="#">Login</a></li>
+    </ul>
+
     {% endblock %}
