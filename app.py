@@ -26,7 +26,21 @@ def about():
 
 @app.route('/add_recipe')
 def add_recipe():
-    return render_template("addrecipe.html")
+    return render_template("addrecipe.html", categories=mongo.db.recipe_categories.find())
+
+@app.route('/edit_recipe/<recipe_id>')
+def edit_recipe(recipe_id):
+    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    all_categories = mongo.db.categories.find()
+    return render_template('editrecipe.html', recipe=the_recipe,
+                           categories=all_categories)
+
+
+@app.route('/insert_recipe', methods=['POST'])
+def insert_recipe():
+    recipes = mongo.db.recipes
+    recipes.insert_one(request.form.to_dict())
+    return redirect(url_for('index'))
 
 
 @app.route('/register')
