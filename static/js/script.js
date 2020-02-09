@@ -8,4 +8,6 @@ $(document).ready(function(){
     indicators: true
     });
 
+    $('select').formSelect();
+  
 });

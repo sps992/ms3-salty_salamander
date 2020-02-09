@@ -5,23 +5,25 @@ h1,h2,h3,h4,h5,h6{ font-family: 'Sigmar One', cursive;}
 p, html{ font-family: 'Oswald', sans-serif;}
 .card .card-image{text-align: center;}
 .recipe-icon{width:100%;}
+p{font-size:18px}
 
 /* Generic styles */
 .align-right{float:right;}
+.footer-link{color:#fff;}
 
 /* Nav Bar */
 
 nav{background-color:#2d1d00;}
-
-nav ul a:hover{background-color:#000000}
-nav ul li.active{background-color:#000000}
+a:hover{color:#ff4e00; transition: color .3s; -webkit-transition: color .3s;}
+a.waves-effect.waves-red.waves-ripple.btn{color: #fff;}
+.active a{background-color:none; color:#ff4e00;}
 
 .btn, .btn-large, .btn-small{background-color:#ff4e00;}
 .btn, .btn-large, .btn-small:hover{background-color:#7b0d1e;}
-.card{margin:3rem 3rem 0 3rem;}
+.card{margin: 3rem 0 0 0;}
 .material-icons{vertical-align: middle; color: #c61700; font-size:14rem;}
 
-/* Nav Bar */
+/* Carousel */
 .carousel.carousel-slider{max-height:900px!important;}
 a.carousel-item{cursor: grab;}
 /* Sticky Footer */
