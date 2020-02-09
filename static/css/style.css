@@ -6,6 +6,7 @@ p, html{ font-family: 'Oswald', sans-serif;}
 .card .card-image{text-align: center;}
 .recipe-icon{width:100%;}
 p{font-size:18px}
+#slider-label-padding{padding-bottom:10px;}
 
 /* Generic styles */
 .align-right{float:right;}
@@ -20,9 +21,11 @@ a.waves-effect.waves-red.waves-ripple.btn{color: #fff;}
 
 .btn, .btn-large, .btn-small{background-color:#ff4e00;}
 .btn, .btn-large, .btn-small:hover{background-color:#7b0d1e;}
-.card{margin: 3rem 0 0 0;}
-.material-icons{vertical-align: middle; color: #c61700; font-size:14rem;}
-
+.card-recipe{margin: 3rem 0 0 0;}
+.card-add_recipe{margin: 3rem;}
+.material-icons{vertical-align: middle; font-size:14rem;}
+.m-icons-primary{color: #c61700;}
+.m-icons-inverse{color:#fff;}
 /* Carousel */
 .carousel.carousel-slider{max-height:900px!important;}
 a.carousel-item{cursor: grab;}

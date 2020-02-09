@@ -9,5 +9,8 @@ $(document).ready(function(){
     });
 
     $('select').formSelect();
+
+    $('#recipe_description').val('');
+  M.textareaAutoResize($('recipe_description'));
   
 });

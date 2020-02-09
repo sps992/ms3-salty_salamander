@@ -20,7 +20,7 @@
         <li><a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('register') }}">Register</a></li>
         <li><a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('about') }}">Login</a></li>
     </ul>
-    <div class="card">
+    <div class="card card-add_recipe">
         <div class="card-content">
         <h3>Add Recipe</h3>
         <div class="row">
@@ -42,7 +42,7 @@
                     <label>Category Select</label>
                 </div>
                 <div class="input-field col s12">
-                    <div>
+                    <div id="slider-label-padding">
                     <i class="material-icons prefix">pie_chart</i>
                     <label >How many people does it serve</label>
                     </div>
@@ -51,6 +51,10 @@
                         <input type="range" id="test5" min="1" max="20" />
                     </p>
                     </div>
+                </div>
+                <div class="input-field col s12">
+                    <textarea id="recipe_description" class="materialize-textarea"></textarea>
+                    <label for="recipe_description">Please enter a description for your recipe.</label>
                 </div>
             </div>
             </form>
