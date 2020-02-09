@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %} 
+ <nav>
+        <div class="nav-wrapper">
+            <img class="brand-logo center" src="../static/images/logo.png" width="auto" height="200px" alt="The Salty Salamander">
+            <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <div>
+            <ul id="nav-mobile" class="hide-on-med-and-down">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li class="active"><a href="#">About</a></li>
+                <li><a href="{{ url_for('add_recipe') }}">Add a Recipe</a></li>
+                <li class="align-right"><a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('register') }}">Register</a></li>
+                <li class="align-right"><a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('login') }}">Login</a></li>
+            </ul>
+        </div>
+    </nav>   
+    <ul class="sidenav" id="mobile-menu">
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li class="active"><a href="#">About</a></li>
+        <li><a href="{{ url_for('add_recipe') }}">Add a Recipe</a></li>
+        <li><a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('register') }}">Register</a></li>
+        <li><a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('login') }}">Login</a></li>
+    </ul>
+
+    <div class="container">
+        <div class="row">
+            <h1>{{recipe.recipe_name}}</h1>
+            <p class="flow-text"><i class="medium material-icons">bookmark_border</i>{{recipe.category_name}}</p>
+        </div>
+        <div class="row">
+        <div class="col s6 m5 l4">
+        <p class="flow-text"><i class="medium material-icons">kitchen</i> Prep time: {{recipe.prep_time_mins}} mins</p>
+        </div>
+        <div class="col s6 m5 l4">
+        <p class="flow-text"><i class="medium material-icons">alarm</i> Cook time: {{recipe.cook_time_mins}} mins</p>
+        </div>
+        <div class="col s6 m3 l4">
+        <p class="flow-text"><i class="medium material-icons">pie_chart</i> Serves {{recipe.serves}}</p>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col s12">
+            <p>{{recipe.description}}</p>
+            <h2>Ingredients</h2>
+            <p>{{recipe.recipe_ingredients}}</p>
+            <h3>Cooking Instructions</h3>
+            <p >{{recipe.cooking_instructions}}</p>
+
+            </div>
+        </div>
+    </div>
+{% endblock %} 
