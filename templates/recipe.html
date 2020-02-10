@@ -24,7 +24,7 @@
     </ul>
     <img src="{{recipe.recipe_img}}">
     <a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('index') }}"><i class="medium material-icons m-icons-inverse">arrow_back</i>Back</a>
-    <a class="waves-effect waves-red waves-ripple btn" href="#"><i class="medium material-icons m-icons-inverse">create</i>Edit</a>
+    <a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"><i class="medium material-icons m-icons-inverse">create</i>Edit</a>
     <a class="waves-effect waves-red waves-ripple btn" href="#"><i class="medium material-icons m-icons-inverse">create</i>Delete</a>
     <div class="container">
         <div class="row">
