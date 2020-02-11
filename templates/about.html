@@ -1,26 +1,6 @@
 {% extends "base.html" %}
-
+{% set active_page = "about" %}
     {% block content %} 
-    <nav>
-        <div class="nav-wrapper">
-            <img class="brand-logo center" src="../static/images/logo.png" width="auto" height="200px" alt="The Salty Salamander">
-            <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <div>
-            <ul id="nav-mobile" class="hide-on-med-and-down">
-                <li><a href="{{ url_for('index') }}">Home</a></li>
-                <li class="active"><a href="#">About</a></li>
-                <li><a href="{{ url_for('add_recipe') }}">Add a Recipe</a></li>
-                <li class="align-right"><a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('register') }}">Register</a></li>
-                <li class="align-right"><a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('login') }}">Login</a></li>
-            </ul>
-        </div>
-    </nav>   
-    <ul class="sidenav" id="mobile-menu">
-        <li><a href="{{ url_for('index') }}">Home</a></li>
-        <li class="active"><a href="#">About</a></li>
-        <li><a href="{{ url_for('add_recipe') }}">Add a Recipe</a></li>
-        <li><a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('register') }}">Register</a></li>
-        <li><a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('login') }}">Login</a></li>
-    </ul>
+  
 
     {% endblock %}
