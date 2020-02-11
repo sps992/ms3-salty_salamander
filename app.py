@@ -61,11 +61,13 @@ def update_recipe(recipe_id):
         'prep_time_mins': request.form.get('prep_time_mins'),
         'cook_time_mins': request.form.get('cook_time_mins')
     })
-    return redirect(url_for('get_tasks'))
+    return redirect(url_for('index'))
 
 
-
-
+@app.route('/delete_recipe/<recipe_id>')
+def delete_recipe(recipe_id):
+    mongo.db.recipes.remove({'_id': ObjectId(recipe_id)}),
+    return redirect(url_for('index'))
 
 @app.route('/register')
 def register():
