@@ -7,6 +7,12 @@ p, html{ font-family: 'Oswald', sans-serif;}
 .recipe-icon{width:100%;}
 p{font-size:18px}
 #slider-label-padding{padding-bottom:10px;}
+.white-text{text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);}
+.lead{font-size:1.6rem; padding-top:2rem;}
+
+/* Containers */
+.about-container{background-image: url('../images/about.jpg'); height:450px; background-size:cover; background-position: center;}
+
 
 /* Generic styles */
 .align-right{float:right;}
@@ -22,13 +28,16 @@ a.waves-effect.waves-red.waves-ripple.btn{color: #fff;}
 .btn, .btn-large, .btn-small{background-color:#ff4e00;}
 .btn, .btn-large, .btn-small:hover{background-color:#7b0d1e;}
 .card-recipe{margin: 3rem 0 0 0;}
-.card-add_recipe{margin: 3rem;}
+.card-add_recipe{margin-top: 3rem;}
 .material-icons{vertical-align: middle; font-size:14rem;}
 .m-icons-primary{color: #c61700;}
 .m-icons-inverse{color:#fff;}
 /* Carousel */
 .carousel.carousel-slider{max-height:900px!important;}
-a.carousel-item{cursor: grab;}
+div.carousel-item{cursor: grab;}
+#slide-one{ background-image: url("../images/slide1-home.jpg"); background-repeat:no-repeat; background-size: cover;}
+#slide-two{ background-image: url("../images/slide2-home.jpg"); background-repeat:no-repeat; background-size: cover;}
+#slide-three{ background-image: url("../images/slide3-home.jpg"); background-repeat:no-repeat; background-size: cover;}
 /* Sticky Footer */
 body {
     display: flex;

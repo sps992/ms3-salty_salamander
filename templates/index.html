@@ -1,12 +1,38 @@
 {% extends "base.html" %}
 {% set active_page = "index" %}
     {% block content %} 
-  <div class="carousel carousel-slider">
-    <a class="carousel-item" href="#one!"><img src="../static/images/slide1-home.jpg"></a>
-    <a class="carousel-item" href="#two!"><img src="../static/images/slide2-home.jpg"></a>
-    <a class="carousel-item" href="#three!"><img src="../static/images/slide3-home.jpg"></a>
+  <div class="carousel carousel-slider center">
+  <div class="carousel-fixed-item center">  
+   
   </div>
-          
+  <div id="slide-one" class="carousel-item red white-text" href="#one!">
+    <div class="container">
+    <div class="row">
+    <h1>Welcome to The Salty Salamander</h1>
+    <p class="white-text lead">Get your fill of our tasty treats or share your own for others to drool over!</p>
+    <a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('about') }}" >Learn More...</a>
+    </div>
+    </div>
+  </div>
+  <div id="slide-two"class="carousel-item amber white-text" href="#two!">
+    <div class="container">
+        <div class="row">
+    <h1>Roast Boast?</h1>
+    <p class="white-text lead">Add your recipe to show off your culinery skills!</p>
+     <a class="waves-effect waves-red waves-ripple btn">Add Recipe</a>
+        </div>
+    </div>
+  </div>
+  <div id="slide-three"class="carousel-item green white-text" href="#three!">
+  <div class="container">
+        <div class="row">
+    <h1>Think you can do better?</h1>
+    <p class="white-text lead">Feel free to edit our recipes to put your unique spin on a dish.</p>
+     <a class="waves-effect waves-red waves-ripple btn">Edit Recipe</a>
+       </div>
+    </div>
+  </div>
+</div>
       
             
     <div class="container">

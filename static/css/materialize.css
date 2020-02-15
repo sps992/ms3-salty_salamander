@@ -8401,9 +8401,7 @@ input[type=range]::-ms-thumb {
   line-height: 32px;
 }
 
-.carousel.carousel-slider .carousel-item p {
-  font-size: 15px;
-}
+
 
 .carousel .carousel-item {
   visibility: hidden;
