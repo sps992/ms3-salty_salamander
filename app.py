@@ -69,15 +69,6 @@ def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)}),
     return redirect(url_for('index'))
 
-@app.route('/register')
-def register():
-    return render_template("register.html")
-
-
-@app.route('/login')
-def login():
-    return render_template("login.html")
-
 
 @app.route('/copyrights')
 def copyrights():
