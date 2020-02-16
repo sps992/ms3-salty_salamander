@@ -27,6 +27,8 @@ Live Heroku link here: https://ms3-salty-salamander.herokuapp.com/
 #### Languages, Frameworks, Editors & Version Control:
 
 #### Tools Used:
+**Kraken image optimizer**
+
 
 ## Features
 

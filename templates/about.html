@@ -1,31 +1,25 @@
-{% extends "base.html" %}
-{% set active_page = "about" %}
-    {% block content %} 
-    <div class="about-container" >
-     <div class="container">
+{% extends "base.html" %}{% set active_page = "about" %}{% block content %} 
+<div class="about-container" >
+    <div class="container">
+        <div class="row">
+            <h1 class="white-text" >About Salty</h1>
+            <p class="white-text lead" >Who even are we?</p>
+        </div>
+    </div>
+</div>
+<div class="container">
     <div class="row">
-    <h1 class="white-text" >About Salty</h1>
-    <p class="white-text lead" >Who even are we?</p>
-     </div>
+        <h2>Born and 'Bread' in Cornwall</h2>
+        <p>...sorry that was awful.</p>
+        <div class="col s12 m6">
+            <img class="padding-bottom" src="../static/images/sam-sedgeman.jpg" width="100%" height="auto" alt="Sam Sedgeman"/>
+        </div>
+        <div class="col s12 m6">
+            <p>The Salty Salamander was developed in the heart of Cornwall with saltwater, sweat and a passion for devouring food. This site is for likeminded people who appreciate a good meal and exactly what goes into the taste.</p>
+            <p>My name is Sam Sedgeman and I have hope you like this site as much as I did creaing it. I would love for this to become a place with a treasure trove of sensational recipes built by a friendly community of crazy foodies, hell bent on finding the next food craze.</p>
+            <p>In my spare time I like to tinker wih code and make web based applications to aid me in everyday life. I love a new project, so if you have a idea for the site or a new project. please feel free to get in touch below...</p>
+            <a class="waves-effect waves-red waves-ripple btn white-text" href="mailto:samuelpeter.sedge992@gmail.com?subject=Salty%20Enquiry?">Get In Touch</a>
+        </div>
     </div>
-    </div>
-   <div class="container">
-   <div class="row">
-   <h2>Born and 'Bread' in Cornwall</h2>
-   <p>...sorry that was awful.</p>
-   <div class="col s12 m6">
-   <img src="../static/images/sam-sedgeman.jpg" width="100%" height="auto" alt="Sam Sedgeman"/>
-   </div>
-   <div class="col s12 m6">
-   <p>The Salty Salamander was developed in the heart of Cornwall with saltwater, sweat and a passion for devouring food. This site is for likeminded people who appreciate a good meal and exactly what goes into the taste.</p>
-   <p>My name is Sam Sedgeman and I have hope you like this site as much as I did creaing it. I would love for this to become a place with a treasure trove of sensational recipes built by a friendly community of crazy foodies, hell bent on finding the next food craze.</p>
-   <p>In my spare time I like to tinker wih code and make web based applications to aid me in everyday life. I love a new project, so if you have a idea for the site or a new project. please feel free to get in touch below...</p>
-    <a class="waves-effect waves-red waves-ripple btn white-text" href="mailto:samuelpeter.sedge992@gmail.com?subject=Salty%20Enquiry?">Get In Touch</a>
-    </div>
-   </div>
-   </div>
-    
-    
-   
-
-    {% endblock %}
+</div>
+{% endblock %}

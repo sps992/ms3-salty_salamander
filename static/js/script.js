@@ -12,5 +12,11 @@ $(document).ready(function(){
 
     $('#recipe_description').val('');
   M.textareaAutoResize($('recipe_description'));
+
+  $("#do-better").click(function() {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#recipe-container").offset().top
+    }, 1000);
+});
   
 });

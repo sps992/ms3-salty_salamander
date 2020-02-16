@@ -1,64 +1,58 @@
 {% extends "base.html" %}
 {% set active_page = "index" %}
     {% block content %} 
-  <div class="carousel carousel-slider center">
-  <div class="carousel-fixed-item center">  
-   
-  </div>
-  <div id="slide-one" class="carousel-item red white-text" href="#one!">
-    <div class="container">
-    <div class="row">
-    <h1>Welcome to The Salty Salamander</h1>
-    <p class="white-text lead">Get your fill of our tasty treats or share your own for others to drool over!</p>
-    <a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('about') }}" >Learn More...</a>
-    </div>
-    </div>
-  </div>
-  <div id="slide-two"class="carousel-item amber white-text" href="#two!">
-    <div class="container">
-        <div class="row">
-    <h1>Roast Boast?</h1>
-    <p class="white-text lead">Add your recipe to show off your culinery skills!</p>
-     <a class="waves-effect waves-red waves-ripple btn">Add Recipe</a>
+<div class="carousel carousel-slider center">
+    <div id="slide-one" class="carousel-item red white-text" href="#one!">
+        <div class="container">
+            <div class="row">
+                <h1>Welcome to The Salty Salamander</h1>
+                <p class="white-text lead">Get your fill of our tasty treats or share your own for others to drool over!</p>
+                <a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('about') }}" >Learn More...</a>
+            </div>
         </div>
     </div>
-  </div>
-  <div id="slide-three"class="carousel-item green white-text" href="#three!">
-  <div class="container">
-        <div class="row">
-    <h1>Think you can do better?</h1>
-    <p class="white-text lead">Feel free to edit our recipes to put your unique spin on a dish.</p>
-     <a class="waves-effect waves-red waves-ripple btn">Edit Recipe</a>
-       </div>
+    <div id="slide-two"class="carousel-item amber white-text" href="#two!">
+        <div class="container">
+            <div class="row">
+                <h1>Roast Boast?</h1>
+                <p class="white-text lead">Add your recipe to show off your culinery skills!</p>
+                <a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('add_recipe') }}">Add Recipe</a>
+            </div>
+        </div>
     </div>
-  </div>
+    <div id="slide-three"class="carousel-item green white-text" href="#three!">
+        <div class="container">
+            <div class="row">
+                <h1>Think you can do better?</h1>
+                <p class="white-text lead">You can edit any recipe by clicking on the recipe and clicking the edit button.</p>
+                <a id="do-better" class="waves-effect waves-red waves-ripple btn" href="#recipe-container">See Below</a>
+            </div>
+        </div>
+    </div>
 </div>
-      
-            
-    <div class="container">
+<div class="container">
     <div class="row">
     <!-- Recipe template -->
-    {% for recipe in recipes %}
-    <div class="col s12 m6 l4">
-      <div class="card card-recipe">
-        <div class="card-image">
-          <img src="{{recipe.recipe_img}}">
+        <h2 id="recipe-container">Our 'Taste-tastic' Recipes</h2>
+        {% for recipe in recipes %}
+        <div class="col s12 m6 l4">
+            <div class="card card-recipe">
+                <div class="card-image">
+                    <img src="{{recipe.recipe_img}}">
+                </div>
+                <div class="card-content">
+                    <span class="card-title"> {{recipe.recipe_name}}</span>
+                    <p><i class="medium material-icons m-icons-primary">child_care</i>{{recipe.author_name}}</p>
+                    <p><i class="medium material-icons m-icons-primary">bookmark_border</i>{{recipe.category_name}}</p>
+                    <p><i class="medium material-icons m-icons-primary">kitchen</i> Prep time: {{recipe.prep_time_mins}}mins</p>
+                    <p><i class="medium material-icons m-icons-primary">alarm</i>Cook time: {{recipe.cook_time_mins}}mins</p>
+                </div>
+                <div class="card-action">
+                    <a href="{{url_for( 'recipe', recipe_id=recipe._id)}}">Read More<i class="medium material-icons">arrow_forward</i></a>
+                </div>
+            </div>
         </div>
-        <div class="card-content">
-            <span class="card-title"> {{recipe.recipe_name}}</span>
-            <p><i class="medium material-icons m-icons-primary">child_care</i>{{recipe.author_name}}</p>
-            <p><i class="medium material-icons m-icons-primary">bookmark_border</i>{{recipe.category_name}}</p>
-            <p><i class="medium material-icons m-icons-primary">kitchen</i> Prep time: {{recipe.prep_time_mins}}mins</p>
-            <p><i class="medium material-icons m-icons-primary">alarm</i>Cook time: {{recipe.cook_time_mins}}mins</p>
-        </div>
-        <div class="card-action">
-          <a href="{{url_for( 'recipe', recipe_id=recipe._id)}}">Read More<i class="medium material-icons">arrow_forward</i></a>
-        </div>
-      </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-  </div>
-  </div>
-  
-  
-        {% endblock %}
+</div>
+{% endblock %}
