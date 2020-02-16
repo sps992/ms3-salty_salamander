@@ -54,12 +54,14 @@ def update_recipe(recipe_id):
     {
         'recipe_name': request.form.get('recipe_name'),
         'category_name': request.form.get('category_name'),
+        'author_name': request.form.get('author_name'),
         'description': request.form.get('description'),
         'serves': request.form.get('serves'),
         'recipe_ingredients': request.form.get('recipe_ingredients'),
         'cooking_instructions': request.form.get('cooking_instructions'),
         'prep_time_mins': request.form.get('prep_time_mins'),
-        'cook_time_mins': request.form.get('cook_time_mins')
+        'cook_time_mins': request.form.get('cook_time_mins'),
+        'recipe_img': request.form.get('recipe_img')
     })
     return redirect(url_for('index'))
 
@@ -68,14 +70,6 @@ def update_recipe(recipe_id):
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)}),
     return redirect(url_for('index'))
-
-
-@app.route('/copyrights')
-def copyrights():
-    return render_template("copyrights.html")
-
-
-
 
 
 if __name__ == '__main__':
