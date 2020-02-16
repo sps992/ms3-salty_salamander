@@ -1,9 +1,8 @@
 {% extends "base.html" %}  {% block content %} 
 <div class="container">
-<div class="card card-add_recipe">
+    <div class="card card-add_recipe">
         <div class="card-content">
-        <h3>Edit {{recipe.recipe_name}} Recipe</h3>
-        <div class="row">
+            <h1>Edit {{recipe.recipe_name}} Recipe</h1>
             <form  action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
             <div class="row">
                 <div class="input-field col s12 m6">
@@ -11,84 +10,78 @@
                     <input id="recipe_name" name="recipe_name" value="{{recipe.recipe_name}}" type="text" class="validate">
                     <label for="recipe_name">Recipe Name</label>
                 </div>
-               <div class="input-field col s12 m6">
+                <div class="input-field col s12 m6">
                     <i class="material-icons prefix">apps</i>
                     <select  id="category_name" name="category_name">
-                    <option value="" disabled selected>Choose your category</option>
-                    {% for cat in categories %}
+                        <option value="" disabled selected>Choose your category</option>
+                        {% for cat in categories %}
                         {% if cat.category_name == recipe.category_name %}
                         <option value="{{recipe.category_name}}" selected >{{recipe.category_name}}</option>
                         {% else %}
                         <option value="{{cat.category_name}}">{{cat.category_name}}</option>
-                    {% endif %}
-                    {% endfor %}
+                        {% endif %}
+                        {% endfor %}
                     </select>
                     <label>Category Select</label>
                 </div>
-                 <div class="input-field col s12 m6">
+                <div class="input-field col s12 m6">
                     <i class="material-icons prefix">child_care</i>
                     <input id="author_name" name="author_name" value="{{recipe.author_name}}" type="text" class="validate">
                     <label for="author_name">Your Nickname</label>
                 </div>
                 <div class="input-field col s12 m6">
                     <div id="slider-label-padding">
-                    <i class="material-icons prefix">pie_chart</i>
-                    <label >How many people does it serve</label>
+                        <i class="material-icons prefix">pie_chart</i>
+                        <label >How many people does it serve</label>
                     </div>
                     <div>
-                    <p class="range-field">
+                        <p class="range-field">
                         <input type="range" id="serves" name="serves"   value="{{recipe.serves}}" min="1" max="20" />
-                    </p>
+                        </p>
                     </div>
                 </div>
-                <div class="input-field col s3">
-               <i class="material-icons prefix">kitchen</i>
-                <label>Please enter your prep time in minutes</label>
+                <div class="input-field col s12 m6 l3">
+                    <i class="material-icons prefix">kitchen</i>
+                    <label for="prep_time_mins">Prep time in minutes</label>
+                    <input id="prep_time_mins" name="prep_time_mins"  type="number" value="{{recipe.prep_time_mins}}" >
                 </div>
-                <div class="input-field col s3">
-                 <input id="prep_time_mins" name="prep_time_mins"  type="number" value="{{recipe.prep_time_mins}}" >
-                </div>
-                <div class="input-field col s3">
-                <i class="material-icons prefix">alarm</i>
-                <label>Please enter your cooking time in minutes</label>
-                </div>
-                  <div class="input-field col s3">
-                <input id="cook_time_mins" name="cook_time_mins" type="number" value="{{recipe.cook_time_mins}}" >
-                </div>
-                <div class="input-field col s12">
-                <i class="material-icons prefix">grade</i>
-                    <textarea id="description" name="description" class="materialize-textarea">{{recipe.description}}</textarea>
-                    <label for="description">Please enter a description for your culinery delight.</label> 
-                </div>
-                <div class="input-field col s12">
-                <i class="material-icons prefix">local_grocery_store</i>
-                    <textarea id="recipe_ingredients" name="recipe_ingredients"  class="materialize-textarea">{{recipe.recipe_ingredients}}</textarea>
-                    <label for="recipe.recipe_ingredients">Please enter your cooking ingredients</label>
-                </div>
-                <div class="input-field col s12">
-                <i class="material-icons prefix">local_dining</i>
-                    <textarea id="cooking_instructions" name="cooking_instructions"  class="materialize-textarea">{{recipe.cooking_instructions}}</textarea>
-                    <label for="cooking_instructions">Please enter your cooking instructions</label>
+                <div class="input-field col s12 m6 l3">
+                    <i class="material-icons prefix">alarm</i>
+                    <label for="cook_time_mins">Cooking time in minutes</label>
+                    <input id="cook_time_mins" name="cook_time_mins"  type="number" value="{{recipe.cook_time_mins}}" >
                 </div>
                 <div class="input-field col s12 m6">
                     <i class="material-icons prefix">image</i>
-                    <input id="recipe_img" name="recipe_img" type="text" class="validate" pattern="https?://.+" value="{{recipe.recipe_img}}" >
-                    <label for="recipe_img">Please add a image link for your recipe</label>
+                    <input id="recipe_img" name="recipe_img" type="text" class="validate" pattern="https?://.+" value="{{recipe.recipe_img}}">
+                    <label for="recipe_img">Recipe image link</label>
                 </div>
-                
-            
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">grade</i>
+                    <textarea id="description" name="description" class="materialize-textarea">{{recipe.description}}</textarea>
+                    <label for="description">Recipe description</label> 
+                </div>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">local_grocery_store</i>
+                    <textarea id="recipe_ingredients" name="recipe_ingredients"  class="materialize-textarea">{{recipe.recipe_ingredients}}</textarea>
+                    <label for="recipe.recipe_ingredients">Cooking ingredients</label>
+                </div>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">local_dining</i>
+                    <textarea id="cooking_instructions" name="cooking_instructions"  class="materialize-textarea">{{recipe.cooking_instructions}}</textarea>
+                    <label for="cooking_instructions">Cooking instructions</label>
+                </div>
             </div>
             <div class="row">
                 <div class="col s12">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Update Recipe
-                <i class="material-icons right">send</i>
-                </button>
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Update Recipe
+                        <i class="material-icons right">send</i>
+                    </button>
                 </div>
             </div>
             </form>
         </div>
-        </div>
     </div>
-    </div>
+</div>
+    
 
     {% endblock %}
