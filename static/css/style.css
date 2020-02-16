@@ -5,7 +5,7 @@ h1,h2,h3,h4,h5,h6{ font-family: 'Sigmar One', cursive;}
 p, html{ font-family: 'Oswald', sans-serif;}
 .card .card-image{text-align: center;}
 .recipe-icon{width:100%;}
-p{font-size:18px}
+p{font-size:18px; margin-top:0;}
 #slider-label-padding{padding-bottom:10px;}
 .white-text{text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);}
 .lead{font-size:1.6rem; padding-top:2rem;}
@@ -17,6 +17,7 @@ p{font-size:18px}
 /* Generic styles */
 .align-right{float:right;}
 .footer-link{color:#fff;}
+.padding-bottom{padding-bottom:18px;}
 
 /* Nav Bar */
 
@@ -58,7 +59,16 @@ body {
 
 
 /* Media Queries */
+@media only screen and (min-width: 993px){
+     nav .nav-wrapper{padding: 4.5rem;}
+    nav {height:150px;}
+    nav .brand-logo{
+        height: 198px;
+        z-index: 1;
+        position: absolute;
+        top: -1px; }
 
+}
 @media only screen and (max-width: 992px)
  { 
     nav .nav-wrapper{padding: 1.7rem 1rem 1rem 1rem;}
@@ -74,5 +84,23 @@ body {
         z-index: 1;
         position: absolute;
         top: -1px; }
+
+}
+
+@media only screen and (max-width: 778px){
+     h1{font-size:2.2rem;}
+     h2{font-size: 1.7rem;}
+    .about-container{height: 245px;}
+
+}
+
+@media only screen and (max-width: 425px){
+    .label{font-size:11.2px;}
+    button.btn.waves-effect.waves-light {
+         width: 100%;
+         text-align: left;}
+    .select-wrapper input.select-dropdown{
+        font-size:11.2px;
+    }
 
 }
