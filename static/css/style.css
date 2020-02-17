@@ -24,8 +24,8 @@ p{font-size:18px; margin-top:0;}
 nav{background-color:#2d1d00;}
 a:hover{color:#ff4e00; transition: color .3s; -webkit-transition: color .3s;}
 a.waves-effect.waves-red.waves-ripple.btn{color: #fff;}
-.active a{background-color:none; color:#ff4e00;}
-.brand-logo{width:auto; height:200; }
+.active a{color:#ff4e00;}
+.brand-logo{width:auto; height:200px; }
 .btn, .btn-large, .btn-small{background-color:#ff4e00;}
 .btn, .btn-large, .btn-small:hover{background-color:#7b0d1e;}
 .card-recipe{margin: 3rem 0 0 0;}
