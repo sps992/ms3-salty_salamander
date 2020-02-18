@@ -6,7 +6,7 @@ This project marks the milestone between the last three units( Python Fundamenta
 Live Heroku link here: https://ms3-salty-salamander.herokuapp.com/
 
 ### The Salty Salamander
-![Salty Salamander logo](static/images/responsive.png")
+![Salty Salamander logo](support-docs/responsive.png")
 
 Welcome to The Salty Salamander Captain Salty here, if you are looking for something tasty to cook up, stray no further! Alas we have recipes aplenty. Have a browse through our wares or create your own, the choice is yours. Think you can make it better? Then prove it, by editing the recipe yourself. Beware to leave your name though, as we don't want recipe piracy!
 
@@ -34,7 +34,7 @@ I used 'Sigmar One' as my heading font as I wanted a big bold and in your face f
 
 #### Colour Scheme
 I have designed the website using orange accents because I feel it draws the user in and has been known colour psychology to enduce a feeling of warmth (like a pizza oven) and excitement (like when I see a salamander!). I used a website caled Coolors(https://coolors.co/) to then pick contrasting well paired colour matches to the orange. 
-![Coolors colour scheme](static/images/color_scheme.png")
+![Coolors colour scheme](support-docs/color_scheme.png")
 Just incase you cannot make out the colour references in the picture, I will add them below:
 
 #000000 --> Maintext colour #2D1D00 --> Subtle colour for navigation containers #FF4E00 --> Main accent colour #7B0D1E --> Button colour primary #C61700 --> Icon primary colour and secondary button colour.
@@ -124,7 +124,7 @@ I ran the checker initially and it flagged a couple of problems of which I fixed
 
 **CSS** - *W3C CSS Validator* -
 Link to checker result: https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fms3-salty-salamander.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#errors
-![W3C CSS result ](support-docs/pep8-Ccheck-result.png)
+![W3C CSS result ](support-docs/nu-css-check-Result.png)
 
 I ran the checker and it only flagged two errors, in which I used shorthand URLs but I corrected shortly after with Jinja URLs. 
 
@@ -135,6 +135,9 @@ Added the content of my "script.js" file into JShint user interface and it came 
 **Python** - *PEP8 Online* -
 Added Python code to online checker and updated bracket indentation to fall in line with standards.
 ![PEP8 result ](support-docs/pep8-check-result.png)
+
+#### Compatibility
+
 
 
 #### Found Bugs and Fixes:
