@@ -2,15 +2,16 @@
 
 {% block content %} 
     <div class="container">
-    <img class="responsive-img" src="{{recipe.recipe_img}}">
-    <div class="row">
-    <div class="col s12">
-     <a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('index') }}"><i class="medium material-icons m-icons-inverse">arrow_back</i>Back</a>
-    <a class="waves-effect waves-red waves-ripple btn" href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"><i class="medium material-icons m-icons-inverse">create</i>Edit</a>
-    <a class="waves-effect waves-red waves-ripple btn" href="{{url_for('delete_recipe', recipe_id=recipe._id)}}"><i class="medium material-icons m-icons-inverse">create</i>Delete</a></div>
+        <img class="responsive-img" src="{{recipe.recipe_img}}">
+        <div class="row">
+            
+                <a class="col s12 m4 waves-effect waves-red waves-ripple btn" href="{{ url_for('index') }}"><i class="medium material-icons m-icons-inverse">arrow_back</i>Back</a>
+                <a class="col s12 m4 waves-effect waves-red waves-ripple btn" href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"><i class="medium material-icons m-icons-inverse">create</i>Edit</a>
+                <a class="col s12 m4 waves-effect waves-red waves-ripple btn" href="{{url_for('delete_recipe', recipe_id=recipe._id)}}"><i class="medium material-icons m-icons-inverse">create</i>Delete</a>
+            
+        </div>
     </div>
-    </div>
-    </div>
+    
    
    
     </div>
@@ -40,7 +41,7 @@
             <p class="flow-text">{{recipe.description}}</p>
             <h2>Ingredients</h2>
             <p>{{recipe.recipe_ingredients}}</p>
-            <h3>Cooking Instructions</h3>
+            <h2>Cooking Instructions</h2>
             <p >{{recipe.cooking_instructions}}</p>
 
             </div>

@@ -6,7 +6,7 @@ This project marks the milestone between the last three units( Python Fundamenta
 Live Heroku link here: https://ms3-salty-salamander.herokuapp.com/
 
 ### The Salty Salamander
-(https://github/static/imagesresponsive.png")
+![Salty Salamander logo](static/images/responsive.png")
 
 Welcome to The Salty Salamander Captain Salty here, if you are looking for something tasty to cook up, stray no further! Alas we have recipes aplenty. Have a browse through our wares or create your own, the choice is yours. Think you can make it better? Then prove it, by editing the recipe yourself. Beware to leave your name though, as we don't want recipe piracy!
 
@@ -34,7 +34,10 @@ I used 'Sigmar One' as my heading font as I wanted a big bold and in your face f
 
 #### Colour Scheme
 I have designed the website using orange accents because I feel it draws the user in and has been known colour psychology to enduce a feeling of warmth (like a pizza oven) and excitement (like when I see a salamander!). I used a website caled Coolors(https://coolors.co/) to then pick contrasting well paired colour matches to the orange. 
-[Insert Image with colours from coolors.com]
+![Coolors colour scheme](static/images/color_scheme.png")
+Just incase you cannot make out the colour references in the picture, I will add them below:
+
+#000000 --> Maintext colour #2D1D00 --> Subtle colour for navigation containers #FF4E00 --> Main accent colour #7B0D1E --> Button colour primary #C61700 --> Icon primary colour and secondary button colour.
 
 #### Icons
 I have solely relied on the Materialize icons. Why? I stuck to one set of icons as my theory was to minimize the number of dependencies my application needed, which is good practice if this application ever was to be released to a real life scenario. I found they were a bit more limited than Font Awesome or the Bootstrap Glyphicons but they served their purpose well.
@@ -49,7 +52,7 @@ The Materialize icons were very easy to implement and easily customisable.
 
 ### Wireframing
 I drew my initial wireframes just using a pen and some paper before looking further into the context and the navigation I needed to complete the projects. For my more in-depth look into what elements needed what space I startd using a programme called Balsamiq. Balsamiq was quite good at providing a lot of simple elements but it was a bit frustrating for someone with a design background as it was unclear what and what you couldn't ungroup and break apart. The customisation was a bit naff at times, but for simply understanding the space elements were going to need, it was very good and quick to get sorted.
-
+![Project wireframes](support-docs/wireframes.jpg)
 
 ## Technology Used
 * **GitPod** - Used as my Sole IDE for writing code.
@@ -115,13 +118,15 @@ Using the previous *add* functionality, I added a half a douzen test recipes and
 
 **HTML** - *W3 Nu Html Checker* -
 Link to checker result: https://validator.w3.org/nu/?doc=https%3A%2F%2Fms3-salty-salamander.herokuapp.com%2F
-[Insert screenshot of page]
+![W3 Nu Html result ](support-docs/nu-html-check-Result.png)
+
 I ran the checker initially and it flagged a couple of problems of which I fixed. Two of these errors related to bad practice of img tag attributes. As you can see from the screenshot above, all the problems have now been rectified.
 
 **CSS** - *W3C CSS Validator* -
 Link to checker result: https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fms3-salty-salamander.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#errors
-[Insert screenshot of page]
-I ran the checker and it only flagged two errors, in which I used shortened URLs. It says on the error that they are missing, when in fact that isn't the case and they work perfectly well. 
+![W3C CSS result ](support-docs/pep8-Ccheck-result.png)
+
+I ran the checker and it only flagged two errors, in which I used shorthand URLs but I corrected shortly after with Jinja URLs. 
 
 
 **JS** - *JShint* -
@@ -129,7 +134,7 @@ Added the content of my "script.js" file into JShint user interface and it came 
 
 **Python** - *PEP8 Online* -
 Added Python code to online checker and updated bracket indentation to fall in line with standards.
-[Insert picture here]
+![PEP8 result ](support-docs/pep8-check-result.png)
 
 
 #### Found Bugs and Fixes:
