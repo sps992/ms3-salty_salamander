@@ -6,7 +6,7 @@ This project marks the milestone between the last three units( Python Fundamenta
 Live Heroku link here: https://ms3-salty-salamander.herokuapp.com/
 
 ### The Salty Salamander
-![Salty Salamander logo](support-docs/responsive.png")
+![Salty Salamander logo](support-docs/responsive.png)
 
 Welcome to The Salty Salamander Captain Salty here, if you are looking for something tasty to cook up, stray no further! Alas we have recipes aplenty. Have a browse through our wares or create your own, the choice is yours. Think you can make it better? Then prove it, by editing the recipe yourself. Beware to leave your name though, as we don't want recipe piracy!
 
@@ -34,7 +34,7 @@ I used 'Sigmar One' as my heading font as I wanted a big bold and in your face f
 
 #### Colour Scheme
 I have designed the website using orange accents because I feel it draws the user in and has been known colour psychology to enduce a feeling of warmth (like a pizza oven) and excitement (like when I see a salamander!). I used a website caled Coolors(https://coolors.co/) to then pick contrasting well paired colour matches to the orange. 
-![Coolors colour scheme](support-docs/color_scheme.png")
+![Coolors colour scheme](support-docs/color_scheme.png)
 Just incase you cannot make out the colour references in the picture, I will add them below:
 
 #000000 --> Maintext colour #2D1D00 --> Subtle colour for navigation containers #FF4E00 --> Main accent colour #7B0D1E --> Button colour primary #C61700 --> Icon primary colour and secondary button colour.
