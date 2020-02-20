@@ -8,7 +8,7 @@ Live Heroku link here: https://ms3-salty-salamander.herokuapp.com/
 ### The Salty Salamander
 ![Salty Salamander logo](support-docs/responsive.png)
 
-Welcome to The Salty Salamander Captain Salty here, if you are looking for something tasty to cook up, stray no further! Alas we have recipes aplenty. Have a browse through our wares or create your own, the choice is yours. Think you can make it better? Then prove it, by editing the recipe yourself. Beware to leave your name though, as we don't want recipe piracy!
+Welcome to The Salty Salamander! Captain Salty here, if you are looking for something tasty to cook up, stray no further! Alas we have recipes aplenty. Have a browse through our wares or create your own, the choice is yours. Think you can make it better? Then prove it, by editing the recipe yourself. Beware to leave your name though, as we don't want recipe piracy!
 
 ## User Experience / UX:
 This project is for my **Data Centric Development** module and my second to last milestone project for my Full Stack Software Development. The main objective for this full stack project is to create a web application that demonstrates the CRUD operations ( Create, Read, Update and delete). The brief I have chosen is to create and build an online cookbook where visitors can use the application as an extension of their paper cookbooks and share, browse, edit and discard recipes in their own cooking community.
@@ -137,14 +137,92 @@ Added Python code to online checker and updated bracket indentation to fall in l
 ![PEP8 result ](support-docs/pep8-check-result.png)
 
 #### Compatibility
-
+I tested my heroku app URL through a website called Lambdatest(https://www.lambdatest.com/) which used a virtual browser to simulate the web application through each browser. I had good results from, Chrome, Microsoft edge, Firefox and Opera. It was a little slow in Opera and reacted a little patchy when resizing the images in the slider on smaller widths. It didn't work very well on Internet explorer, I'm not sure why. But I have good reason to believe it was something to do with not supporting all the css I had used.
 
 
 #### Found Bugs and Fixes:
+**Font Sizes** - I had an initial problem with the resizing of my main font on smaller widths as I was using rem measurements instead of pixels. This had an unexpected result when sizing the browser down and it broke out of the container to the right of the screen. I solved this simply by reducing the overall size and adding a media query to restrict it on smaller widths.
 
+A lot of issues I thought were bugs at first but when I refactored my code I seemed to slowly iron them out as I went. 
 
 ## Deployment
 
-## Credits
+*Local deployment* 
+To deploy this app locally you are going to need to start by getting the following prerequisites:
 
-### Special Thanks & Acknowledgements:
+*Python 3.7.6 - Which is the latest version at this current time.
+*PIP - This is used by python to install apps required to undertake specific Python functions/tasks.
+*Code Editor - You will need this to set up your environment for your project and write your code( I used Gitpod as Code Institute have a fantastic starting template for the basic environment variables pre-installed)
+*Git - You will need this for version control and for repository manipulation. 
+*MongoDB Atlas - You will need a database provider, for cloud storage of your database or local configuration you can download the app.
+*WinZip - A file archiver and compressor, used for extracting your project. If you download the project rather than cloning from the command line.
+*Getting physical*
+
+Once you have aquired all the prerequisites, you are ready to start making your application environment.
+1. Clone this repository by clicking the "clone" button ( its a green button labelled "Clone or Download"). This will proceed to download the repository as a zip file. Alternatively, you can do this from your CLI inside your IDE's terminal window with the command of:
+**git clone https://github.com/sps992/ms3-salty_salamander.git**
+2. Make sure to navigate to the correct file directory after downloading and unpacking your files. Use the command **cd <folder directory>** 
+3.**Your next step is very important and if not done properly could potentially leave security vulnerabilities to your database!** Create a file called **py.env** which will contain all your secret credientials needed to perform CRUD tasks between your database and your application. Details required are your **MONGO_URI** and your **SECRET_KEY**.
+4.Next open up the requirements.txt file and make yourself familiar with dependencies listed within the document. You can use the CLI of your code editor to install these automatically by the 
+**sudo -H pip3 -r requirements.txt** command. Please take note this may vary slightly depending on your IDE, Gitpod does not require "sudo" at the start.
+5. Next ready up your database account (I used MongoDB) and create the following
+**Database called**:recipe_db       **Collections**:recipe_categories
+                                                    recipes
+And add the following contents to those collections:
+**recipe_categories**:
+category_name
+**recipes**:
+recipe_name
+category_name
+author_name
+description
+serves
+recipe_ingredients
+cooking_instructions
+prep_time_mins
+cook_time_mins
+recipe_img
+
+6. You now have everything you need to run the application. If you are using Gitpod run the command **python3 app.py** which initalizes the app and should give you a prompt to expose the local host your app is running on. At the time of this video I used the open port of **http://0.0.0.0:8080/**. Either press **ctrl + click** on the link or when prompted open the preview in your browser by clicking the option.
+
+**Remote Deployment**
+I personally deployed my Flask based app on Heroku as that is what I have been taught to use. To do the same as me please follow the next steps carefully!
+
+1.Create a free Heroku account (https://www.heroku.com/), create an app to deploy your app to later.
+2. Create a ***requirements.txt*** file, this is so Heroku can understand what it needs to install to run your app. To do this in the CLI type:
+**pip3 freeze --local > requirements.txt**
+Or use the one, you previously downloaded from my repository.
+3. Create a ***Procfile*** in order to tell Heroku what kind of application is being deployed and what build pack it needs to run it. To create a Procfile in the CLI please type the following:
+**echo web: python run.py > Procfile**
+Again you can use the one you downloaded from my repository earlier if it saves time. But it is good practice to make your own!
+4.In your Heroku dashboard, navigate to your app frame you made earlier and click on the **Deploy** tab, Choose **Github** as your deployment method. You can then click the ***enable automatic deployment*** for Heroku to automatically pull the new version when you pull a new commit to Github. 
+4.To point your to Heroku, click on the settings tab, and click on ***reveal config vars***. Proceed to then input the following details:
+**IP:** 0.0.0.0
+**PORT:** 8080
+**MONGO_URI**<link to your Mongo DB>
+**SECRET_KEY**<ssssh enter your secret key here>
+5. Your new beautiful Flask app should now be now LIVE on Heroku. Click the **open app** button to road test it. GOOD LUCK
+## Copyrights
+
+#### Media 
+I used the following royalty free images from these following websites
+*Unsplash -->
+https://unsplash.com/
+*Pexels -->
+https://www.pexels.com/
+
+#### Content
+I used the recipes to populate my database from:
+
+BBC Good Food -->
+https://www.bbcgoodfood.com/
+
+### Special Thanks & Inspiration:
+#### Inspiration
+*To fully channel my creativity I used Pinterest(https://www.pinterest.co.uk/) to look at various logo designs for cooking companies and various logo elements.
+*I looked at awwwards.(https://www.awwwards.com/) for layout and UX/UI design inspiration. 
+
+#### Special Thanks
+*I would like to give special thanks to my mighty Code Institute peers on the Slack workspace for leading me to solve and carefully think out some flaws in my coding.
+*I would also like to thank profusely the Code Institute support team, especially the ones putting in the hard weekend grind( You know who you are!). I bow to your great knowledge and I really can't thank you enough for helping me out of the mud on several occasions. 
+*Finally but in no way the least, I thank my girlfriend for my late nights coding and general grumpiness through this course so far. One unit to go, BRING IT ON!
